@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>View</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<div align="center">
+<h5>Employee Detail</h5>
+<br>
+<table style="width: 80%" border="1"
+       class="table table-striped table-responsive-md" >
+
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>phone Number</th>
+        <th>Department</th>
+        <th>Job Title</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${employee.name}"></td>
+        <td th:text="${employee.email}"></td>
+        <td th:text="${employee.phoneNumber}"></td>
+        <td th:text="${employee.department}"></td>
+        <td th:text="${employee.jobtitle}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<a th:href="@{/}">Back to Employee List</a>
+</div>
+</body>
+</html>
